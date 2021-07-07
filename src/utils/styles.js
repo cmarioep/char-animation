@@ -17,3 +17,5 @@ const rubberBand =  {
         75%{transform: scale3d(1.05,0.95,1);}
         100%{transform: scale3d(1,1,1);}`
 }
+
+export {singleChar, rubberBand};
