@@ -50,4 +50,4 @@ const mouseEvent = () => {
 
 }
 
-export {mouseEvent};
+export {removeAnimation, addAnimation, toogleAnimation};
