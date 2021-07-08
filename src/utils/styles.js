@@ -3,10 +3,15 @@ const singleChar = {
     declaration: `display: inline-block;`
 }
 
+const colorHover = {
+    selector: `.text-char-animation-hoverColor`,
+    declaration: `color: inherit;`
+}
+
 
 const rubberBand =  {
     selector: `.rubberBand`,
-    declaration: `color: red; animation: rubberBand 1.2s ease-in-out forwards;`,
+    declaration: `animation: rubberBand 1.2s ease-in-out forwards;`,
     keyframesRule: `@keyframes rubberBand`,
     keyFramesDeclaration: 
         `0%{transform: scale3d(1,1,1);}
@@ -18,4 +23,4 @@ const rubberBand =  {
         100%{transform: scale3d(1,1,1);}`
 }
 
-export {singleChar, rubberBand};
+export {singleChar, colorHover, rubberBand};

@@ -4,3 +4,8 @@ h1 {
     color: blueviolet;
 }
 
+p {
+    width: 70%;
+    font-size: 1.4rem;
+    margin: 3rem auto;
+}

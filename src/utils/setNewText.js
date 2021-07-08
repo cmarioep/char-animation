@@ -1,4 +1,11 @@
-let setNewText = (selector) => {
+import {createStyles} from './createStyles.js';
+import {singleChar, colorHover} from './styles.js';
+
+let setNewText = (selector, color) => {
+
+    colorHover.declaration = `color: ${color};`
+    createStyles(singleChar.selector, singleChar.declaration);
+    createStyles(colorHover.selector, colorHover.declaration);
 
     let targetElement = document.querySelectorAll(selector);
 

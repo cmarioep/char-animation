@@ -2,7 +2,7 @@
 const removeAnimation = (item) => {
     return new Promise ((resolve, reject) => {
         setTimeout(()=>{
-            item.classList.remove("rubberBand");
+            item.classList.remove("rubberBand", "text-char-animation-hoverColor");
             console.log("Quito");
             resolve();
         },0)
@@ -12,7 +12,7 @@ const removeAnimation = (item) => {
 const addAnimation = (item) => {
     return new Promise ((resolve, reject) => {
         setTimeout(()=>{
-            item.classList.add("rubberBand");
+            item.classList.add("rubberBand", "text-char-animation-hoverColor");
             console.log("Pongo");
             resolve();
         },0)
@@ -37,7 +37,7 @@ const mouseEvent = () => {
 
     mouseTarget.forEach( (item) => {
         item.addEventListener('mouseenter', e => {
-            item.classList.add("rubberBand");
+            addAnimation(item);
         });
     })
 
@@ -50,4 +50,4 @@ const mouseEvent = () => {
 
 }
 
-export {removeAnimation, addAnimation, toogleAnimation};
+export {removeAnimation, addAnimation, toogleAnimation, mouseEvent};
