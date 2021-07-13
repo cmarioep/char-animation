@@ -1,48 +1,48 @@
 
-const removeAnimation = (item) => {
+const removeAnimation = (item, animation) => {
     return new Promise ((resolve, reject) => {
         setTimeout(()=>{
-            item.classList.remove("char-animator--rubberBand", "char-animator--hoverStyle");
+            item.classList.remove(`char-animator--${animation}`, "char-animator--hoverStyle");
             console.log("Quito");
             resolve();
         },0)
     })
 }
 
-const addAnimation = (item) => {
+const addAnimation = (item, animation) => {
     return new Promise ((resolve, reject) => {
         setTimeout(()=>{
-            item.classList.add("char-animator--rubberBand", "char-animator--hoverStyle");
+            item.classList.add(`char-animator--${animation}`, "char-animator--hoverStyle");
             console.log("Pongo");
             resolve();
         },0)
     })
 }
 
-async function toogleAnimation (item) {
-    await removeAnimation(item);
-    await addAnimation(item);
+async function toogleAnimation (item, animation) {
+    await removeAnimation(item, animation);
+    await addAnimation(item, animation);
     await setTimeout(() => {
-        removeAnimation(item);
+        removeAnimation(item, animation);
     }, 1200);
 }
 
 
-const mouseEvent = () => {
+const mouseEvent = (animation) => {
 
-    const mouseTarget = document.querySelectorAll('.singleChar');
+    const mouseTarget = document.querySelectorAll('.char-animator--singleChar');
 
 
     mouseTarget.forEach( (item) => {
         item.addEventListener('mouseenter', event => {
-            addAnimation(item);
+            addAnimation(item, animation);
         });
     })
 
 
     mouseTarget.forEach((item) => {
         item.addEventListener('mouseleave', event => {
-            toogleAnimation(item);    
+            toogleAnimation(item, animation);    
         });
     })
 

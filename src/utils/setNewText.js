@@ -22,7 +22,7 @@ let setNewText = (selector, color, stroke) => {
             span.textContent = char;
     
             if (span.textContent !== " ") {
-              span.classList.add("singleChar");
+              span.classList.add("char-animator--singleChar");
             }
     
             newChars.push(span);
