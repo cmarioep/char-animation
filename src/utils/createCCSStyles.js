@@ -1,5 +1,5 @@
-import {checkForSelector, checkForDeclaration, checkForArguments, checkForStylesSheets} from './cssRuleMaker_argumentsCheckers.js';
-import {insertNewRule, insertNewStyleElement} from './cssRuleMaker.js';
+import {checkForSelector, checkForDeclaration, checkForArguments, checkForStylesSheets} from './checkers.js';
+import {insertNewRule, insertNewStyleElement} from './createCSSRules.js';
 
 // Create Styles for text-char-animation
 const createStyles = (selector, declaration) => {

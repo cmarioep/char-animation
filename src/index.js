@@ -1,4 +1,4 @@
-import {createStyles} from './utils/createStyles.js';
+import {createStyles} from './utils/createCCSStyles.js';
 import {rubberBand} from './utils/styles.js';
 import {setNewText} from './utils/setNewText.js';
 import {mouseEvent} from './utils/mouseHover.js';
@@ -11,14 +11,14 @@ createStyles(rubberBand.keyframesRule, rubberBand.keyFramesDeclaration);
 
 // TODO: Animation selector
 
-const animateText = (selector, color = `color: inherit;`) => {
+const animateText = (selector, color = `inherit;`, stroke = `inherit` ) => {
 
-    setNewText(selector, color);
+    setNewText(selector, color, stroke);
     mouseEvent();
 
 }
 
-animateText(".rubberText", "greenyellow");
+animateText(".rubberText", "greenyellow", "blue");
 
 
 

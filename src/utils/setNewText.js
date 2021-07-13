@@ -1,11 +1,11 @@
-import {createStyles} from './createStyles.js';
-import {singleChar, colorHover} from './styles.js';
+import {createStyles} from './createCCSStyles.js';
+import {singleChar, hoverStyle} from './styles.js';
 
-let setNewText = (selector, color) => {
+let setNewText = (selector, color, stroke) => {
 
-    colorHover.declaration = `color: ${color};`
+    hoverStyle.declaration = `color: ${color};  -webkit-text-stroke: 1px ${stroke};`
     createStyles(singleChar.selector, singleChar.declaration);
-    createStyles(colorHover.selector, colorHover.declaration);
+    createStyles(hoverStyle.selector, hoverStyle.declaration);
 
     let targetElement = document.querySelectorAll(selector);
 

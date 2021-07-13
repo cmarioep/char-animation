@@ -2,7 +2,7 @@
 const removeAnimation = (item) => {
     return new Promise ((resolve, reject) => {
         setTimeout(()=>{
-            item.classList.remove("rubberBand", "text-char-animation-hoverColor");
+            item.classList.remove("char-animator--rubberBand", "char-animator--hoverStyle");
             console.log("Quito");
             resolve();
         },0)
@@ -12,7 +12,7 @@ const removeAnimation = (item) => {
 const addAnimation = (item) => {
     return new Promise ((resolve, reject) => {
         setTimeout(()=>{
-            item.classList.add("rubberBand", "text-char-animation-hoverColor");
+            item.classList.add("char-animator--rubberBand", "char-animator--hoverStyle");
             console.log("Pongo");
             resolve();
         },0)
@@ -28,22 +28,20 @@ async function toogleAnimation (item) {
 }
 
 
-
-
 const mouseEvent = () => {
 
     const mouseTarget = document.querySelectorAll('.singleChar');
 
 
     mouseTarget.forEach( (item) => {
-        item.addEventListener('mouseenter', e => {
+        item.addEventListener('mouseenter', event => {
             addAnimation(item);
         });
     })
 
 
     mouseTarget.forEach((item) => {
-        item.addEventListener('mouseleave', e => {
+        item.addEventListener('mouseleave', event => {
             toogleAnimation(item);    
         });
     })

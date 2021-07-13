@@ -1,5 +1,5 @@
 {
-  "name": "text-char-animation",
+  "name": "char-animator",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
