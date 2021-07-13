@@ -1,5 +1,5 @@
 import {createStyles} from './utils/createCCSStyles.js';
-import {rubberBand, bounce} from './utils/styles.js';
+import {rubberBand, bounce, pulse} from './utils/styles.js';
 import {setNewText} from './utils/setNewText.js';
 import {mouseEvent} from './utils/mouseHover.js';
 
@@ -10,6 +10,9 @@ createStyles(rubberBand.keyframesRule, rubberBand.keyFramesDeclaration);
 
 createStyles(bounce.selector, bounce.declaration);
 createStyles(bounce.keyframesRule, bounce.keyFramesDeclaration);
+
+createStyles(pulse.selector, pulse.declaration);
+createStyles(pulse.keyframesRule, pulse.keyFramesDeclaration);
 
 
 // TODO: Animation selector

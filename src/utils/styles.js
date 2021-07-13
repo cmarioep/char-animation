@@ -62,5 +62,21 @@ const bounce =  {
 }
 
 
+const pulse =  {
+  selector: `.char-animator--pulse`,
+  declaration: `animation: char-animator--pulse 1s infinite both;`,
+  keyframesRule: `@keyframes char-animator--pulse`,
+  keyFramesDeclaration: 
+      `0% {
+        transform: scale3d(1, 1, 1)
+      }
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05)
+      }
+      100% {
+        transform: scale3d(1, 1, 1)
+      }`
+}
 
-export {singleChar, hoverStyle, rubberBand, bounce};
+
+export {singleChar, hoverStyle, rubberBand, bounce, pulse};
