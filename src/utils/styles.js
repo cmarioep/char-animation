@@ -41,10 +41,10 @@ const rubberBand =  {
 
 const bounce =  {
     selector: `.char-animator--bounce`,
-    declaration: `animation: char-animator--bounce 1s infinite both;`,
+    declaration: `animation: char-animator--bounce 1.2s infinite both;`,
     keyframesRule: `@keyframes char-animator--bounce`,
     keyFramesDeclaration:
-        `0%, 100%, 20%, 53%, 80% {
+        `0%, 100%, 10%, 53%, 80% {
             transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
             transform: translate3d(0, 0, 0)
           }
@@ -64,14 +64,14 @@ const bounce =  {
 
 const pulse =  {
   selector: `.char-animator--pulse`,
-  declaration: `animation: char-animator--pulse 1s infinite both;`,
+  declaration: `animation: char-animator--pulse 1.2s infinite both;`,
   keyframesRule: `@keyframes char-animator--pulse`,
   keyFramesDeclaration: 
       `0% {
         transform: scale3d(1, 1, 1)
       }
       50% {
-        transform: scale3d(1.05, 1.05, 1.05)
+        transform: scale3d(1.1, 1.1, 1.1)
       }
       100% {
         transform: scale3d(1, 1, 1)
@@ -79,4 +79,27 @@ const pulse =  {
 }
 
 
-export {singleChar, hoverStyle, rubberBand, bounce, pulse};
+const tada =  {
+  selector: `.char-animator--tada`,
+  declaration: `animation: char-animator--tada 1.2s infinite both;`,
+  keyframesRule: `@keyframes char-animator--tada`,
+  keyFramesDeclaration: 
+      `0% {
+        transform: scale3d(1, 1, 1)
+      }
+      10%, 20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+      }
+      30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+      }
+      40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+      }
+      100% {
+        transform: scale3d(1, 1, 1)
+      }`
+}
+
+
+export {singleChar, hoverStyle, rubberBand, bounce, pulse, tada};
