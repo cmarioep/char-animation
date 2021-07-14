@@ -39,13 +39,13 @@ const checkForArguments = (selector, declaration) => {
     const validSelector = checkForSelector(selector);
     const validDeclaration = checkForDeclaration(declaration);
     
-    let validArguments;
+    let hasValidArguments;
 
     (!validSelector || !validDeclaration)
-        ? validArguments = false
-        : validArguments = true;
+        ? hasValidArguments = false
+        : hasValidArguments = true;
 
-    return validArguments;
+    return hasValidArguments;
 }
     
 
@@ -62,5 +62,20 @@ const checkForStylesSheets = () => {
 
 }
 
+// checker for all argument in charAnimator function
+const checkForOptions = (...args) => {
 
-export {checkForSelector, checkForDeclaration, checkForArguments, checkForStylesSheets};
+    let hasValidOptions;
+    const options = [...args]
+    const validOptions = options.every( (arg) => typeof arg === 'string');
+
+    (validOptions)
+        ? hasValidOptions = true
+        : hasValidOptions = false;
+
+    return hasValidOptions;
+
+}
+
+
+export {checkForSelector, checkForDeclaration, checkForArguments, checkForStylesSheets, checkForOptions};

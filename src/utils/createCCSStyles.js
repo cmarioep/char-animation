@@ -16,7 +16,7 @@ const createStyles = (selector, declaration) => {
             : insertNewStyleElement(validSelector, validDeclaration);
 
     } else {
-        console.log("TypeError: An argument passed is incompatible with the type expected by the function");
+        console.error("TypeError: An argument passed is incompatible with the type expected by the function");
     }
 }
 

@@ -1,3 +1,4 @@
+import {checkForOptions} from './utils/checkers.js';
 import {rubberBand, bounce, pulse, tada, swing} from './utils/styles.js';
 import {createStyles} from './utils/createCCSStyles.js';
 import {setNewText} from './utils/setNewText.js';
@@ -24,18 +25,24 @@ createStyles(swing.keyframesRule, swing.keyFramesDeclaration);
 // TODO: Strict argument for selector
 // TODO: check fot valid arguments
 
-const animateText = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
-
-    setNewText(selector, animation, color, stroke);
-    mouseEvent(animation);
+const charAnimator = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
+    
+    const hasValidOptions = checkForOptions(selector, animation, color, stroke);
+    
+    if (hasValidOptions) {
+        setNewText(selector, animation, color, stroke);
+        mouseEvent(animation);
+    } else {
+        console.error("TypeError: An argument passed is incompatible with the type expected by the function");
+    }
 
 }
 
-animateText(".rubber-Text", "rubberBand", "greenyellow", "blue");
-animateText(".bounce-Text", "bounce", "greenyellow", "blue");
-animateText(".pulse-Text", "pulse", "greenyellow", "blue");
-animateText(".tada-Text", "tada", "greenyellow", "blue");
-animateText(".swing-Text", "swing", "greenyellow", "blue");
+charAnimator(".rubber-Text", "rubberBand", "greenyellow", "blue");
+charAnimator(".bounce-Text", "bounce", "greenyellow", "blue");
+charAnimator(".pulse-Text", "pulse", "greenyellow", "blue");
+charAnimator(".tada-Text", "tada", "greenyellow", "blue");
+charAnimator(".swing-Text", "swing", "greenyellow", "blue");
 
 
 
