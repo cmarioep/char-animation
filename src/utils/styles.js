@@ -102,4 +102,27 @@ const tada =  {
 }
 
 
-export {singleChar, hoverStyle, rubberBand, bounce, pulse, tada};
+const swing =  {
+  selector: `.char-animator--swing`,
+  declaration: `transform-origin: top center; animation: char-animator--swing 1.2s infinite both;`,
+  keyframesRule: `@keyframes char-animator--swing`,
+  keyFramesDeclaration: 
+      `20% {
+        transform: rotate3d(0, 0, 1, 15deg)
+      }
+      40% {
+        transform: rotate3d(0, 0, 1, -10deg)
+      }
+      60% {
+        transform: rotate3d(0, 0, 1, 5deg)
+      }
+      80% {
+        transform: rotate3d(0, 0, 1, -5deg)
+      }
+      100% {
+        transform: rotate3d(0, 0, 1, 0deg)
+      }`
+}
+
+
+export {singleChar, hoverStyle, rubberBand, bounce, pulse, tada, swing};

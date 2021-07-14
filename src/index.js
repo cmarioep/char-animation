@@ -1,5 +1,5 @@
+import {rubberBand, bounce, pulse, tada, swing} from './utils/styles.js';
 import {createStyles} from './utils/createCCSStyles.js';
-import {rubberBand, bounce, pulse, tada} from './utils/styles.js';
 import {setNewText} from './utils/setNewText.js';
 import {mouseEvent} from './utils/mouseHover.js';
 
@@ -17,8 +17,11 @@ createStyles(pulse.keyframesRule, pulse.keyFramesDeclaration);
 createStyles(tada.selector, tada.declaration);
 createStyles(tada.keyframesRule, tada.keyFramesDeclaration);
 
+createStyles(swing.selector, swing.declaration);
+createStyles(swing.keyframesRule, swing.keyFramesDeclaration);
 
-// TODO: Animation selector
+
+// TODO: check fot valid arguments
 
 const animateText = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
 
@@ -27,7 +30,7 @@ const animateText = (selector, animation, color = `inherit;`, stroke = `inherit`
 
 }
 
-animateText(".rubberText", "tada", "greenyellow", "blue");
+animateText(".rubberText", "swing", "greenyellow", "blue");
 
 
 
