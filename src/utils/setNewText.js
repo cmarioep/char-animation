@@ -1,7 +1,7 @@
 import {createStyles} from './createCCSStyles.js';
 import {singleChar, hoverStyle} from './styles.js';
 
-let setNewText = (selector, color, stroke) => {
+let setNewText = (selector, animation, color, stroke) => {
 
     hoverStyle.declaration = `color: ${color};  -webkit-text-stroke: 1px ${stroke};`
     createStyles(singleChar.selector, singleChar.declaration);
@@ -22,7 +22,7 @@ let setNewText = (selector, color, stroke) => {
             span.textContent = char;
     
             if (span.textContent !== " ") {
-              span.classList.add("char-animator--singleChar");
+              span.classList.add("char-animator--singleChar", `char-animator--singleChar--${animation}`);
             }
     
             newChars.push(span);

@@ -30,7 +30,7 @@ async function toogleAnimation (item, animation) {
 
 const mouseEvent = (animation) => {
 
-    const mouseTarget = document.querySelectorAll('.char-animator--singleChar');
+    const mouseTarget = document.querySelectorAll(`.char-animator--singleChar--${animation}`);
 
 
     mouseTarget.forEach( (item) => {

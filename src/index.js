@@ -21,16 +21,21 @@ createStyles(swing.selector, swing.declaration);
 createStyles(swing.keyframesRule, swing.keyFramesDeclaration);
 
 
+// TODO: Strict argument for selector
 // TODO: check fot valid arguments
 
 const animateText = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
 
-    setNewText(selector, color, stroke);
+    setNewText(selector, animation, color, stroke);
     mouseEvent(animation);
 
 }
 
-animateText(".rubberText", "swing", "greenyellow", "blue");
+animateText(".rubber-Text", "rubberBand", "greenyellow", "blue");
+animateText(".bounce-Text", "bounce", "greenyellow", "blue");
+animateText(".pulse-Text", "pulse", "greenyellow", "blue");
+animateText(".tada-Text", "tada", "greenyellow", "blue");
+animateText(".swing-Text", "swing", "greenyellow", "blue");
 
 
 

@@ -41,7 +41,7 @@ const rubberBand =  {
 
 const bounce =  {
     selector: `.char-animator--bounce`,
-    declaration: `animation: char-animator--bounce 1.2s infinite both;`,
+    declaration: `animation: char-animator--bounce 1.2s both;`,
     keyframesRule: `@keyframes char-animator--bounce`,
     keyFramesDeclaration:
         `0%, 100%, 10%, 53%, 80% {
@@ -64,7 +64,7 @@ const bounce =  {
 
 const pulse =  {
   selector: `.char-animator--pulse`,
-  declaration: `animation: char-animator--pulse 1.2s infinite both;`,
+  declaration: `animation: char-animator--pulse 1.2s both;`,
   keyframesRule: `@keyframes char-animator--pulse`,
   keyFramesDeclaration: 
       `0% {
@@ -81,7 +81,7 @@ const pulse =  {
 
 const tada =  {
   selector: `.char-animator--tada`,
-  declaration: `animation: char-animator--tada 1.2s infinite both;`,
+  declaration: `animation: char-animator--tada 1.2s both;`,
   keyframesRule: `@keyframes char-animator--tada`,
   keyFramesDeclaration: 
       `0% {
@@ -104,7 +104,7 @@ const tada =  {
 
 const swing =  {
   selector: `.char-animator--swing`,
-  declaration: `transform-origin: top center; animation: char-animator--swing 1.2s infinite both;`,
+  declaration: `transform-origin: top center; animation: char-animator--swing 1.2s both;`,
   keyframesRule: `@keyframes char-animator--swing`,
   keyFramesDeclaration: 
       `20% {
