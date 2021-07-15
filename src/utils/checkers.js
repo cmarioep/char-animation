@@ -63,10 +63,10 @@ const checkForStylesSheets = () => {
 }
 
 // checker for all argument in charAnimator function
-const checkForOptions = (...args) => {
+const checkForOptions = (selector, animation, color, stroke) => {
 
     let hasValidOptions;
-    const options = [...args]
+    const options = [selector, animation, color, stroke]
     const validOptions = options.every( (arg) => typeof arg === 'string');
 
     (validOptions)

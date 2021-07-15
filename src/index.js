@@ -1,42 +1,23 @@
 import {checkForOptions} from './utils/checkers.js';
-import {rubberBand, bounce, pulse, tada, swing} from './utils/styles.js';
-import {createStyles} from './utils/createCCSStyles.js';
+import {setStyleAnimation} from './utils/createCCSStyles.js';
 import {setNewText} from './utils/setNewText.js';
 import {mouseEvent} from './utils/mouseHover.js';
 
 
-
-createStyles(rubberBand.selector, rubberBand.declaration);
-createStyles(rubberBand.keyframesRule, rubberBand.keyFramesDeclaration);
-
-createStyles(bounce.selector, bounce.declaration);
-createStyles(bounce.keyframesRule, bounce.keyFramesDeclaration);
-
-createStyles(pulse.selector, pulse.declaration);
-createStyles(pulse.keyframesRule, pulse.keyFramesDeclaration);
-
-createStyles(tada.selector, tada.declaration);
-createStyles(tada.keyframesRule, tada.keyFramesDeclaration);
-
-createStyles(swing.selector, swing.declaration);
-createStyles(swing.keyframesRule, swing.keyFramesDeclaration);
-
-
-// TODO: Strict argument for selector
-// TODO: check fot valid arguments
-
-const charAnimator = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
+const charAnimator = (selector, animation = `rubberBand`, color = `inherit;`, stroke = `inherit` ) => {
     
     const hasValidOptions = checkForOptions(selector, animation, color, stroke);
     
     if (hasValidOptions) {
         setNewText(selector, animation, color, stroke);
+        setStyleAnimation(animation);
         mouseEvent(animation);
     } else {
         console.error("TypeError: An argument passed is incompatible with the type expected by the function");
     }
 
 }
+
 
 charAnimator(".rubber-Text", "rubberBand", "greenyellow", "blue");
 charAnimator(".bounce-Text", "bounce", "greenyellow", "blue");
