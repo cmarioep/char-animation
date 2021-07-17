@@ -22,7 +22,7 @@ const createStyles = (selector, declaration) => {
 }
 
 
-const setStyleAnimation = (animation) => {
+const setAnimationStyle = (animation) => {
     switch (animation) {
         case "rubberBand":
             createStyles(rubberBand.selector, rubberBand.declaration);
@@ -50,10 +50,10 @@ const setStyleAnimation = (animation) => {
             break;
     
         default:
-            console.log("This animation is not defined");
+            console.log("Animation is not defined");
             break;
     }
 }
 
-export {createStyles, setStyleAnimation};
+export {createStyles, setAnimationStyle};
 

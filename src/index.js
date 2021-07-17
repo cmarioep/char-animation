@@ -1,7 +1,7 @@
 import {checkForOptions} from './utils/checkers.js';
-import {setStyleAnimation} from './utils/createCCSStyles.js';
+import {setAnimationStyle} from './utils/createCCSStyles.js';
 import {setNewText} from './utils/setNewText.js';
-import {mouseEvent} from './utils/mouseHover.js';
+import {setAnimation} from './utils/setAnimation.js';
 
 
 const charAnimator = (selector, animation = `rubberBand`, color = `inherit;`, stroke = `inherit` ) => {
@@ -10,8 +10,8 @@ const charAnimator = (selector, animation = `rubberBand`, color = `inherit;`, st
     
     if (hasValidOptions) {
         setNewText(selector, animation, color, stroke);
-        setStyleAnimation(animation);
-        mouseEvent(animation);
+        setAnimationStyle(animation);
+        setAnimation(animation);
     } else {
         console.error("TypeError: An argument passed is incompatible with the type expected by the function");
     }

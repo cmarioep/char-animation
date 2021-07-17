@@ -28,7 +28,7 @@ async function toogleAnimation (item, animation) {
 }
 
 
-const mouseEvent = (animation) => {
+const setAnimation = (animation) => {
 
     const mouseTarget = document.querySelectorAll(`.char-animator--singleChar--${animation}`);
 
@@ -48,4 +48,4 @@ const mouseEvent = (animation) => {
 
 }
 
-export {removeAnimation, addAnimation, toogleAnimation, mouseEvent};
+export {removeAnimation, addAnimation, toogleAnimation, setAnimation};
