@@ -1,14 +1,14 @@
 {
   "name": "char-animator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple text animator: split strings text into single chars and applies animations to each one when the cursor passes over them.",
   "main": "src/index.js",
   "scripts": {
     "build": "webpack --mode production"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["chars", "animations", "text color", "text stroke"],
+  "author": "cmarioep <cmescandonpardo@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/plugin-transform-runtime": "^7.14.5",
@@ -16,5 +16,13 @@
     "babel-loader": "^8.2.2",
     "webpack": "^5.43.0",
     "webpack-cli": "^4.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmarioep/char-animator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cmarioep/char-animator/issues"
+  },
+  "homepage": "https://github.com/cmarioep/char-animator#readme"
 }

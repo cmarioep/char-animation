@@ -19,11 +19,7 @@ const charAnimator = (selector, animation = `rubberBand`, color = `inherit;`, st
 }
 
 
-charAnimator(".rubber-Text", "rubberBand", "greenyellow", "blue");
-charAnimator(".bounce-Text", "bounce", "greenyellow", "blue");
-charAnimator(".pulse-Text", "pulse", "greenyellow", "blue");
-charAnimator(".tada-Text", "tada", "greenyellow", "blue");
-charAnimator(".swing-Text", "swing", "greenyellow", "blue");
+export default charAnimator;
 
 
 
