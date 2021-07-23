@@ -4,7 +4,7 @@ import {setNewText} from './utils/setNewText.js';
 import {setAnimation} from './utils/setAnimation.js';
 
 
-const charAnimator = (selector, animation = `rubberBand`, color = `inherit;`, stroke = `inherit` ) => {
+const charAnimator = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
     
     const hasValidOptions = checkForOptions(selector, animation, color, stroke);
     
