@@ -1,4 +1,4 @@
-// checkers to validate arguments in CSS Rule Maker
+// checkers to validate arguments in createCSSStyles function
 
 
 // Individual checker for selector argument

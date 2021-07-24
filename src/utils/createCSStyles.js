@@ -2,12 +2,17 @@ import {checkForSelector, checkForDeclaration, checkForArguments, checkForStyles
 import {insertNewRule, insertNewStyleElement} from './createCSSRules.js';
 import {rubberBand, bounce, pulse, tada, swing} from './styles.js';
 
-// Create Styles for text-char-animation
-const createStyles = (selector, declaration) => {
 
+/**
+ * Create styles for animations
+ * @param {String} selector class | id | tag
+ * @param {String | Array} declaration properties declaration
+ */
+const createStyles = (selector, declaration) => {
     const hasValidArguments = checkForArguments(selector, declaration);
     const hasStyleSheets = checkForStylesSheets();
 
+    // check for arguments and then insert new CSS rules
     if (hasValidArguments) {
         const validSelector = checkForSelector(selector);
         const validDeclaration = checkForDeclaration(declaration);
@@ -22,6 +27,7 @@ const createStyles = (selector, declaration) => {
 }
 
 
+// Create a CSS style rule according to the selected animation
 const setAnimationStyle = (animation) => {
     switch (animation) {
         case "rubberBand":
@@ -54,6 +60,7 @@ const setAnimationStyle = (animation) => {
             break;
     }
 }
+
 
 export {createStyles, setAnimationStyle};
 

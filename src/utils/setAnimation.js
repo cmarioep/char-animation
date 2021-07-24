@@ -1,24 +1,27 @@
-
-const removeAnimation = (item, animation) => {
-    return new Promise ((resolve, reject) => {
-        setTimeout(()=>{
-            item.classList.remove(`char-animator--${animation}`, "char-animator--hoverStyle");
-            console.log("Quito");
-            resolve();
-        },0)
-    })
-}
-
+//Set selected animation style
 const addAnimation = (item, animation) => {
     return new Promise ((resolve, reject) => {
         setTimeout(()=>{
             item.classList.add(`char-animator--${animation}`, "char-animator--hoverStyle");
-            console.log("Pongo");
             resolve();
         },0)
     })
 }
 
+
+//Remove selected animation style
+const removeAnimation = (item, animation) => {
+    return new Promise ((resolve, reject) => {
+        setTimeout(()=>{
+            item.classList.remove(`char-animator--${animation}`, "char-animator--hoverStyle");
+            resolve();
+        },0)
+    })
+}
+
+
+//Toogle selected animation style
+// synchronous function, await for each state
 async function toogleAnimation (item, animation) {
     await removeAnimation(item, animation);
     await addAnimation(item, animation);
@@ -28,18 +31,19 @@ async function toogleAnimation (item, animation) {
 }
 
 
+//Toogles selected animation when the cursor passes over each char
 const setAnimation = (animation) => {
 
     const mouseTarget = document.querySelectorAll(`.char-animator--singleChar--${animation}`);
 
-
+    //set selected animation style when the cursor passes for the first time over the chars
     mouseTarget.forEach( (item) => {
         item.addEventListener('mouseenter', event => {
             addAnimation(item, animation);
         });
     })
-
-
+    
+    //Toogle selected animation style when the cursor leaves the chars
     mouseTarget.forEach((item) => {
         item.addEventListener('mouseleave', event => {
             toogleAnimation(item, animation);    
@@ -47,5 +51,6 @@ const setAnimation = (animation) => {
     })
 
 }
+
 
 export {removeAnimation, addAnimation, toogleAnimation, setAnimation};

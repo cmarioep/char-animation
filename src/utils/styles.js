@@ -1,14 +1,19 @@
+//CSS rule for each single char
 const singleChar = {
     selector: `.char-animator--singleChar`,
     declaration: `display: inline-block;`
 }
 
 
+//Default CSS rule for text-color and text-stroke
 const hoverStyle = {
     selector: `.char-animator--hoverStyle`,
     declaration: `color: inherit; -webkit-text-stroke: 1px inherit;`
 }
 
+
+// CSS rules for available animations
+// rubberBand | bounce | pulse | tada | swing |
 
 const rubberBand =  {
     selector: `.char-animator--rubberBand`,
