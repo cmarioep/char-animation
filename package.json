@@ -7,8 +7,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "webpack --mode production",
-    "build-dev": "webpack --mode development"
+    "build": "webpack --mode production --output-path ./dist/char-animator.min.js",
+    "build-dev": "webpack --mode development --output-path ./dist/char-animator.js"
   },
   "keywords": [
     "chars",

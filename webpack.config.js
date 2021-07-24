@@ -9,7 +9,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "char-animator.js",
+    filename: "char-animator.min.js",
     library: {
       type: 'module',
     },
