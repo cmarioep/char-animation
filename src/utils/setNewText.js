@@ -28,7 +28,7 @@ let setNewText = (selector, animation, color, stroke) => {
             span.textContent = char;
     
             if (span.textContent !== " ") {
-              span.classList.add("char-animator--singleChar", `char-animator--singleChar--${animation}`);
+              span.classList.add("char-animation--singleChar", `char-animation--singleChar--${animation}`);
             }
     
             newChars.push(span);

@@ -1,13 +1,13 @@
 //CSS rule for each single char
 const singleChar = {
-    selector: `.char-animator--singleChar`,
+    selector: `.char-animation--singleChar`,
     declaration: `display: inline-block;`
 }
 
 
 //Default CSS rule for text-color and text-stroke
 const hoverStyle = {
-    selector: `.char-animator--hoverStyle`,
+    selector: `.char-animation--hoverStyle`,
     declaration: `color: inherit; -webkit-text-stroke: 1px inherit;`
 }
 
@@ -16,9 +16,9 @@ const hoverStyle = {
 // rubberBand | bounce | pulse | tada | swing |
 
 const rubberBand =  {
-    selector: `.char-animator--rubberBand`,
-    declaration: `animation: char-animator--rubberBand 1.2s ease-in-out forwards;`,
-    keyframesRule: `@keyframes char-animator--rubberBand`,
+    selector: `.char-animation--rubberBand`,
+    declaration: `animation: char-animation--rubberBand 1.2s ease-in-out forwards;`,
+    keyframesRule: `@keyframes char-animation--rubberBand`,
     keyFramesDeclaration: 
         `0% {
           transform: scale3d(1,1,1);
@@ -45,9 +45,9 @@ const rubberBand =  {
 
 
 const bounce =  {
-    selector: `.char-animator--bounce`,
-    declaration: `animation: char-animator--bounce 1.2s both;`,
-    keyframesRule: `@keyframes char-animator--bounce`,
+    selector: `.char-animation--bounce`,
+    declaration: `animation: char-animation--bounce 1.2s both;`,
+    keyframesRule: `@keyframes char-animation--bounce`,
     keyFramesDeclaration:
         `0%, 100%, 10%, 53%, 80% {
             transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
@@ -68,9 +68,9 @@ const bounce =  {
 
 
 const pulse =  {
-  selector: `.char-animator--pulse`,
-  declaration: `animation: char-animator--pulse 1.2s both;`,
-  keyframesRule: `@keyframes char-animator--pulse`,
+  selector: `.char-animation--pulse`,
+  declaration: `animation: char-animation--pulse 1.2s both;`,
+  keyframesRule: `@keyframes char-animation--pulse`,
   keyFramesDeclaration: 
       `0% {
         transform: scale3d(1, 1, 1)
@@ -85,9 +85,9 @@ const pulse =  {
 
 
 const tada =  {
-  selector: `.char-animator--tada`,
-  declaration: `animation: char-animator--tada 1.2s both;`,
-  keyframesRule: `@keyframes char-animator--tada`,
+  selector: `.char-animation--tada`,
+  declaration: `animation: char-animation--tada 1.2s both;`,
+  keyframesRule: `@keyframes char-animation--tada`,
   keyFramesDeclaration: 
       `0% {
         transform: scale3d(1, 1, 1)
@@ -108,9 +108,9 @@ const tada =  {
 
 
 const swing =  {
-  selector: `.char-animator--swing`,
-  declaration: `transform-origin: top center; animation: char-animator--swing 1.2s both;`,
-  keyframesRule: `@keyframes char-animator--swing`,
+  selector: `.char-animation--swing`,
+  declaration: `transform-origin: top center; animation: char-animation--swing 1.2s both;`,
+  keyframesRule: `@keyframes char-animation--swing`,
   keyFramesDeclaration: 
       `20% {
         transform: rotate3d(0, 0, 1, 15deg)

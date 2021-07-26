@@ -62,7 +62,7 @@ const checkForStylesSheets = () => {
 
 }
 
-// checker for all argument in charAnimator function
+// checker for all argument in charanimation function
 const checkForOptions = (selector, animation, color, stroke) => {
 
     let hasValidOptions;

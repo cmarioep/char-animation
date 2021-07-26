@@ -11,7 +11,7 @@ import {setAnimation} from './utils/setAnimation.js';
  * @param {String} color #hex | rgb | rgba | hsl | hsla
  * @param {String} stroke #hex | rgb | rgba | hsl | hsla
  */
-const charAnimator = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
+const charanimation = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
     
     const hasValidOptions = checkForOptions(selector, animation, color, stroke);
     
@@ -26,7 +26,7 @@ const charAnimator = (selector, animation, color = `inherit;`, stroke = `inherit
 }
 
 
-export default charAnimator;
+export default charanimation;
 
 
 

@@ -1,20 +1,21 @@
 {
-  "name": "char-animator",
+  "name": "char-animation",
   "version": "1.0.0",
-  "description": "A simple text animator: split strings text into single chars and applies animations to each one when the cursor passes over them.",
-  "main": "dist/text-char-animation.js",
+  "description": "Simple text animator: splits strings text into single chars and applies animations to each one when the cursor passes over them.",
+  "main": "dist/char-animation.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "webpack --mode production --output-path ./dist/char-animator.min.js",
-    "build-dev": "webpack --mode development --output-path ./dist/char-animator.js"
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development"
   },
   "keywords": [
     "chars",
     "animations",
     "text color",
-    "text stroke"
+    "text stroke",
+    "split text"
   ],
   "author": "cmarioep",
   "license": "MIT",
@@ -28,10 +29,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cmarioep/char-animator.git"
+    "url": "git+https://github.com/cmarioep/char-animation.git"
   },
   "bugs": {
-    "url": "https://github.com/cmarioep/char-animator/issues"
+    "url": "https://github.com/cmarioep/char-animation/issues"
   },
-  "homepage": "https://github.com/cmarioep/char-animator#readme"
+  "homepage": "https://github.com/cmarioep/char-animation#readme"
 }
