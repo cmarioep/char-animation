@@ -22,7 +22,7 @@ $ npm i -S char-animation
 ```
 
 ## Import package
-To use, you'll need to import `charanimation`  into your js file.
+To use, you'll need to import `charAnimation`  into your js file.
 ```js
 import charAnimation from './node_modules/char-animation/dist/char-animation.js';
 ```
