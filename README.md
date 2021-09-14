@@ -29,17 +29,19 @@ import charAnimation from './node_modules/char-animation/dist/char-animation.js'
 
 ## Use
 ```js
-charAnimation(selector, animation, text-color, text-stroke);
+charAnimation({selector, animation, color, stroke});
 ```
 
 ## Parameters
+
+The function receive an object with the follow parameters:
 
 | Param| Type | Description | Default | 
 | ------------ | ------------ | ------------ | ------------ |
 | selector    | string | Valid CSS selector:<br>class \| id \| tag<br>element which the animation will be applied | Required |
 | animation   | string | Options:<br>rubberBand \| bounce \| pulse \| tada \| swing | Required |
-| text-color  | string | Color format:<br> #hex \| rgb \| rgba \| hsl \| hsla<br>changes the font color when the cursor passes over the chars                                                                     | Optional |
-| text-stroke | string | Color format:<br> #hex \| rgb \| rgba \| hsl \| hsla<br>changes the stroke color when the cursor passes over the chars |  Optional |
+| color  | string | Color format:<br> #hex \| rgb \| rgba \| hsl \| hsla<br>changes the font color when the cursor passes over the chars                                                                     | Optional |
+| stroke | string | Color format:<br> #hex \| rgb \| rgba \| hsl \| hsla<br>changes the stroke color when the cursor passes over the chars |  Optional |
 
 ## License
 MIT

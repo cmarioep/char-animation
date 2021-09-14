@@ -6,12 +6,15 @@ import {setAnimation} from './utils/setAnimation.js';
 
 /**
  * Split strings text into single chars and applies animations to each one when the cursor passes over them
- * @param {String} selector class | id | tag
- * @param {String} animation rubberBand | bounce | pulse | tada | swing
- * @param {String} color #hex | rgb | rgba | hsl | hsla
- * @param {String} stroke #hex | rgb | rgba | hsl | hsla
+ * @param {object} parameters
+ * {
+    * selector: class | id | tag,
+    * animation: rubberBand | bounce | pulse | tada | swing,
+    * color: #hex | rgb | rgba | hsl | hsla, 
+    * stroke: #hex | rgb | rgba | hsl | hsla
+ * }
  */
-const charanimation = (selector, animation, color = `inherit;`, stroke = `inherit` ) => {
+const charanimation = ({selector, animation, color = `inherit;`, stroke = `inherit`} = {} ) => {
     
     const hasValidOptions = checkForOptions(selector, animation, color, stroke);
     
