@@ -32,6 +32,7 @@ import charAnimation from './node_modules/char-animation/dist/char-animation.js'
 charAnimation({selector, animation, color, stroke});
 ```
 
+
 ## Parameters
 
 The function receive an object with the follow parameters:
@@ -42,6 +43,20 @@ The function receive an object with the follow parameters:
 | animation   | string | Options:<br>rubberBand \| bounce \| pulse \| tada \| swing | Required |
 | color  | string | Color format:<br> #hex \| rgb \| rgba \| hsl \| hsla<br>changes the font color when the cursor passes over the chars                                                                     | Optional |
 | stroke | string | Color format:<br> #hex \| rgb \| rgba \| hsl \| hsla<br>changes the stroke color when the cursor passes over the chars |  Optional |
+
+
+##  Example
+```js
+charAnimation(
+	{
+		selector: "h1", 
+		animation: "rubberBand",  
+		color: "green", 
+		stroke: "blue"
+	}
+);
+
+```
 
 ## License
 MIT

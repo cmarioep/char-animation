@@ -1,6 +1,6 @@
 {
   "name": "char-animation",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple text animator: splits strings text into single chars and applies animations to each one when the cursor passes over them.",
   "main": "dist/char-animation.js",
   "files": [
