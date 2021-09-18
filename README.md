@@ -48,12 +48,12 @@ The function receive an object with the follow parameters:
 ##  Example
 ```js
 charAnimation(
-	{
-		selector: "h1", 
-		animation: "rubberBand",  
-		color: "green", 
-		stroke: "blue"
-	}
+  {
+    selector: "h1", 
+    animation: "rubberBand",  
+    color: "green", 
+    stroke: "blue"
+  }
 );
 
 ```
