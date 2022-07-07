@@ -1,7 +1,7 @@
 //CSS rule for each single char
 const singleChar = {
     selector: `.char-animation--singleChar`,
-    declaration: `display: inline-block;`
+    declaration: `display: inline-block; font-size: inherit`
 }
 
 
