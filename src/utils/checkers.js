@@ -1,55 +1,4 @@
-// checkers to validate arguments in createCSSStyles function
-
-
-// Individual checker for selector argument
-const checkForSelector = (selector) => {
-    
-    let checkedSelector = "";
-    
-    (typeof selector === "string") 
-        ?checkedSelector = selector
-        :checkedSelector = null;
-
-    return checkedSelector;
-}
-
-
-// individual checker for declaration argument
-const checkForDeclaration = (declaration) => {
-    
-    let checkedDeclaration;
-
-    if(typeof declaration === "string") {
-        checkedDeclaration = declaration;
-    } 
-    else if (Array.isArray(declaration)) {
-        checkedDeclaration = declaration.join(";")
-    } 
-    else {
-        checkedDeclaration = null;
-    }
-
-    return checkedDeclaration;
-}
-
-
-// checker for both arguments
-const checkForArguments = (selector, declaration) => {
-
-    const validSelector = checkForSelector(selector);
-    const validDeclaration = checkForDeclaration(declaration);
-    
-    let hasValidArguments;
-
-    (!validSelector || !validDeclaration)
-        ? hasValidArguments = false
-        : hasValidArguments = true;
-
-    return hasValidArguments;
-}
-    
-
-// checker for an associated styleSheet
+// checker for an associated styleSheet in createCSSStyles function
 const checkForStylesSheets = () => {
     
     let hasStylesSheets;
@@ -62,10 +11,12 @@ const checkForStylesSheets = () => {
 
 }
 
-// checker for all argument in charanimation function
+
+// checker for all argument in charAnimation function
 const checkForOptions = (selector, animation, color, stroke) => {
 
     let hasValidOptions;
+    
     const options = [selector, animation, color, stroke]
     const validOptions = options.every( (arg) => typeof arg === 'string');
 
@@ -78,4 +29,4 @@ const checkForOptions = (selector, animation, color, stroke) => {
 }
 
 
-export {checkForSelector, checkForDeclaration, checkForArguments, checkForStylesSheets, checkForOptions};
+export { checkForStylesSheets, checkForOptions };

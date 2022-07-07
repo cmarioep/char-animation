@@ -1,4 +1,4 @@
-import {checkForSelector, checkForDeclaration, checkForArguments, checkForStylesSheets} from './checkers.js';
+import {checkForStylesSheets} from './checkers.js';
 import {insertNewRule, insertNewStyleElement} from './createCSSRules.js';
 import {rubberBand, bounce, pulse, tada, swing} from './styles.js';
 
@@ -9,21 +9,13 @@ import {rubberBand, bounce, pulse, tada, swing} from './styles.js';
  * @param {String | Array} declaration properties declaration
  */
 const createStyles = (selector, declaration) => {
-    const hasValidArguments = checkForArguments(selector, declaration);
+
     const hasStyleSheets = checkForStylesSheets();
 
-    // check for arguments and then insert new CSS rules
-    if (hasValidArguments) {
-        const validSelector = checkForSelector(selector);
-        const validDeclaration = checkForDeclaration(declaration);
-
         (hasStyleSheets) 
-            ? insertNewRule(validSelector, validDeclaration)       
-            : insertNewStyleElement(validSelector, validDeclaration);
+            ? insertNewRule(selector, declaration)       
+            : insertNewStyleElement(selector, declaration);
 
-    } else {
-        console.error("TypeError: An argument passed is incompatible with the type expected by the function");
-    }
 }
 
 

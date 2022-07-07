@@ -21,6 +21,7 @@ let setNewText = (selector, animation, color, stroke) => {
         const newChars = [];
 
         element.textContent="";
+        
 
         // Set CSS rules for each single char
         textArray.forEach((char)=>{
@@ -33,7 +34,7 @@ let setNewText = (selector, animation, color, stroke) => {
     
             newChars.push(span);
         })
-    
+        
         // Splitted string text
         element.append(...newChars);
     })
